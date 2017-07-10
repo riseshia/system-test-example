@@ -1,16 +1,13 @@
 language: ruby
 cache: bundler
 dist: trusty
+env:
+  DISPLAY: :99.0
+  RAILS_ENV: test
 addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
-env: DISPLAY=':99.0'
+  chrome: beta
 before_script:
-  - gem update --system
-  - RAILS_ENV=test bin/rails db:migrate
+  - bin/travis_system_setup.sh
 script:
   - bin/rails test:system
 install: bundle install --without development
