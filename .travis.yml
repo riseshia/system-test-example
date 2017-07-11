@@ -6,7 +6,7 @@ env:
   RAILS_ENV: test
   CHROME_DRIVER_VERSION: '2.30'
 addons:
-  chrome: beta
+  chrome: stable
 before_script:
   - bin/travis_system_setup.sh
 script:
