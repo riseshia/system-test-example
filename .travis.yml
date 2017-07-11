@@ -4,6 +4,7 @@ dist: trusty
 env:
   DISPLAY: :99.0
   RAILS_ENV: test
+  CHROME_DRIVER_VERSION: '2.30'
 addons:
   chrome: beta
 before_script:
